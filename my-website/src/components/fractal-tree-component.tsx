@@ -1,20 +1,50 @@
 import React from "react"
+import { ReactP5Wrapper } from "react-p5-wrapper";
 
 
 const FractalTree: React.FC = () => {
-    return (
-        <div className="fractal-tree">
-            <svg viewBox="15 15 60px 20px" xmlns="http://www.w3.org/2000/svg">
-                <g fill="white" stroke="white" strokeWidth="0.5">
-                    <line x1="50" y1="100" x2="50" y2="80" />
-                    <line x1="50" y1="80" x2="40" y2="70" />
-                    <line x1="50" y1="80" x2="60" y2="70" />
-                    <line x1="40" y1="70" x2="30" y2="60" />
-                    <line x1="60" y1="70" x2="70" y2="60" />
-                </g>
-            </svg>
-        </div>
-    )
+    function sketch(p: any) {
+        let angle = 0;
+
+        p.setup = () => {
+            p.createCanvas(325, 325);
+            p.angleMode(p.RADIANS);
+            p.noFill();
+        };
+
+        p.draw = () => {
+            p.background('#0A192F');
+            p.translate(p.width / 2, p.height);
+
+            // Animate angle over time to spiral
+            angle = p.map(p.sin(p.frameCount * 0.02), -1, 1, p.PI / 10, p.PI / 2);
+
+            drawBranch(100, 0); // start recursive draw
+        };
+
+        function drawBranch(len: number, depth: number) {
+            // Dynamic color: shift from purple to cyan as it recurses
+            const hue = p.map(depth, 0, 10, 280, 180); // purple to aqua
+            p.stroke(`hsl(${hue}, 100%, 70%)`);
+            p.line(0, 0, 0, -len);
+            p.translate(0, -len);
+
+            if (len > 10) {
+                p.push();
+                p.rotate(angle + depth * 0.02); // spiral right branch slightly
+                drawBranch(len * 0.67, depth + 1);
+                p.pop();
+
+                p.push();
+                p.rotate(-angle - depth * 0.02); // spiral left branch slightly
+                drawBranch(len * 0.67, depth + 1);
+                p.pop();
+            }
+        }
+    }
+
+    return <ReactP5Wrapper sketch={sketch} />;
 }
+
 export default FractalTree
 // This component renders a simple fractal tree using SVG.  
