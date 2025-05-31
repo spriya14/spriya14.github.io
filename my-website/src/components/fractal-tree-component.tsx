@@ -4,8 +4,8 @@ import React from "react"
 const FractalTree: React.FC = () => {
     return (
         <div className="fractal-tree">
-            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                <g fill="none" stroke="black" strokeWidth="0.5">
+            <svg viewBox="15 15 60px 20px" xmlns="http://www.w3.org/2000/svg">
+                <g fill="white" stroke="white" strokeWidth="0.5">
                     <line x1="50" y1="100" x2="50" y2="80" />
                     <line x1="50" y1="80" x2="40" y2="70" />
                     <line x1="50" y1="80" x2="60" y2="70" />

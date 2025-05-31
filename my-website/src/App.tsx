@@ -6,11 +6,11 @@ import FractalTree from './components/fractal-tree-component';
 function App() {
   return (
     <div className="App">
-      <FractalTree />
+
       <header className="App-header">
-       
+        <FractalTree />
         <p>
-          Hey There! Wasssup! <br/>
+          Hey There! Wasssup! <br />
         </p>
       </header>
 
