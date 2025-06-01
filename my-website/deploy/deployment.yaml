@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: spbatson-website-deployment
+  labels:
+    app: spbatson-website
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: spbatson-website
+  template:
+    metadata:
+      labels:
+        app: spbatson-website
+    spec:
+      containers:
+        - name: spbatson-website
+          image: us-west1-docker.pkg.dev/robertb724-personal/apps/images/spbatson-website:multiarch7
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 80
