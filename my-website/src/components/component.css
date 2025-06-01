@@ -1,0 +1,16 @@
+.change-theme-button {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #D6A4E6;
+    /* Lavender */
+    color: #1C1C1C;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+}
