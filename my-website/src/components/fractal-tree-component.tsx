@@ -1,8 +1,10 @@
 import React from "react"
 import { ReactP5Wrapper } from "react-p5-wrapper";
 
-
-const FractalTree: React.FC = () => {
+type PropTypes = {
+    backgroundColor: string;
+}
+const FractalTree: React.FC<PropTypes> = ({ backgroundColor }) => {
     function sketch(p: any) {
         let angle = 0;
 
@@ -13,7 +15,7 @@ const FractalTree: React.FC = () => {
         };
 
         p.draw = () => {
-            p.background('#0A192F');
+            p.background(backgroundColor);
             p.translate(p.width / 2, p.height);
 
             // Animate angle over time to spiral
