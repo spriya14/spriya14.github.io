@@ -7,6 +7,7 @@ import Introduction from './components/introduction-comp/introduction-component'
 import ChangeThemeButton from './components/changeTheme-component';
 import { useSelector } from 'react-redux';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import ProjectCardsComponent from './components/introduction-comp/project-cards-component';
 
 function App() {
   const theme = useSelector((state: any) => state.theme.mode);
@@ -23,7 +24,7 @@ function App() {
           <div
             className="card border-0 shadow rounded"
             style={{
-              backgroundColor: isDark ? ' rgba(40,20,60,0.85), rgba(20,15,30,0.85)' : 'rgba(255, 247, 235, 0.85)',
+              backgroundColor: isDark ? ' #1b1a2e' : 'rgba(255, 247, 235, 0.85)',
               color: isDark ? '#dddddd' : '#333',
               fontFamily: "'Poppins', sans-serif",
               padding: '1.5rem',
@@ -37,7 +38,8 @@ function App() {
                   fontWeight: 600,
                   fontSize: '1.75rem',
                   color: '#e86a33', // warm rust highlight
-                  fontFamily: "'DM Sans', sans-serif"
+                  fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif'
+
                 }}
               >
                 👋 Hi, I'm Su
@@ -65,8 +67,8 @@ function App() {
           </div>
         </div>
       </div>
-
       <WelcomeText />
+      <ProjectCardsComponent />
       <Introduction />
     </header>
   );

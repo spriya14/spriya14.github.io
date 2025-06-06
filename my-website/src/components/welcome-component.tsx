@@ -18,9 +18,9 @@ const WelcomeText = () => {
 
     return (
         <div>
-            <p style={{ color: "purple", fontSize: "2rem", textAlign: "left", paddingLeft: "20px" }}>
-                {displayWelcomeText} <br />
-            </p>
+        <p style={{ color: "purple", fontSize: "2rem", textAlign: "left", paddingLeft: "20px" }}>
+            {displayWelcomeText} <br />
+        </p>
         </div>
     );
 }
