@@ -42,7 +42,7 @@ function App() {
 
                 }}
               >
-                👋I'm Su🧟‍♀️
+                I'm Su🧟‍♀️
               </h3>
               <p
                 className="card-text"

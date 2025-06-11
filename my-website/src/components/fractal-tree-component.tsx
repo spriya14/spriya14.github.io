@@ -31,7 +31,7 @@ const FractalTree: React.FC<PropTypes> = ({ backgroundColor }) => {
             p.line(0, 0, 0, -len);
             p.translate(0, -len);
 
-            if (len > 10) {
+            if (len > 8) {
                 p.push();
                 p.rotate(angle + depth * 0.02); // spiral right branch slightly
                 drawBranch(len * 0.67, depth + 1);
