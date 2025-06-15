@@ -1,8 +1,10 @@
 import React from "react";
+import Styles from "./top-nav/top-navigation.module.css";
+
 
 
 const WelcomeText = () => {
-    const fullText = "hi there! Wasssup...";
+    const fullText = "hi there! Wasssup";
     const [displayWelcomeText, setDisplayWelcomeText] = React.useState("");
 
     React.useEffect(() => {
@@ -18,9 +20,10 @@ const WelcomeText = () => {
 
     return (
         <div>
-        <p style={{ color: "purple", fontSize: "2rem", textAlign: "left", paddingLeft: "20px" }}>
-            {displayWelcomeText} <br />
-        </p>
+
+            <p style={{ color: "purple", fontSize: "2rem", textAlign: "left", paddingLeft: "20px" }}>
+                {displayWelcomeText}<span className={Styles["pulsing-dot"]}></span><span className={Styles["pulsing-dot"]}></span><span className={Styles["pulsing-dot"]}></span> <br />
+            </p>
         </div>
     );
 }
