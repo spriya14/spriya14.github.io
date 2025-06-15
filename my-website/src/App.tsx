@@ -8,6 +8,8 @@ import ChangeThemeButton from './components/changeTheme-component';
 import { useSelector } from 'react-redux';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ProjectCardsComponent from './components/introduction-comp/project-cards-component';
+import ChatbotComponent from './components/introduction-comp/chatbot-component/chatbot-comp';
+import TopNavigation from './components/top-nav/top-navigation-comp';
 
 function App() {
   const theme = useSelector((state: any) => state.theme.mode);
@@ -15,7 +17,8 @@ function App() {
   const isDark = theme === 'dark';
   return (
     <header style={{ backgroundColor: background_color }} className="App-header">
-      <ChangeThemeButton />
+             
+        <ChangeThemeButton /> 
       <div className="row">
         <div className="col-md-3">
           <FractalTree backgroundColor={background_color} />
@@ -70,6 +73,7 @@ function App() {
       <WelcomeText />
       <ProjectCardsComponent />
       <Introduction />
+      <ChatbotComponent />
     </header>
   );
 }
