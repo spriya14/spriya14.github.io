@@ -17,7 +17,7 @@ function App() {
   const isDark = theme === 'dark';
   return (
     <header style={{ backgroundColor: background_color }} className="App-header">
-        <TopNavigation />
+      <TopNavigation />
       <div className="row">
         <div className="col-md-3">
           <FractalTree backgroundColor={background_color} />
@@ -40,7 +40,7 @@ function App() {
                   fontWeight: 600,
                   fontSize: '1.75rem',
                   color: '#e86a33', // warm rust highlight
-                  fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif'
+                  fontFamily: "'Pacifico', cursive"
 
                 }}
               >
@@ -51,7 +51,7 @@ function App() {
                 style={{
                   fontSize: '1.1rem',
                   lineHeight: 1.7,
-                  fontFamily: "'Raleway', sans-serif"
+                  fontFamily: 'FigTree, sans-serif',
 
                 }}
               >
