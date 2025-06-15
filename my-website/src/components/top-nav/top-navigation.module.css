@@ -1,0 +1,30 @@
+.navbar-row {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 2rem;
+  background-color: #0A192F;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  font-family: 'Inter', sans-serif;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  font-size: 1rem;
+}
+
+.nav-links a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #38bdf8; /* Tailwind's cyan-400 */
+}

@@ -17,8 +17,7 @@ function App() {
   const isDark = theme === 'dark';
   return (
     <header style={{ backgroundColor: background_color }} className="App-header">
-             
-        <ChangeThemeButton /> 
+        <TopNavigation />
       <div className="row">
         <div className="col-md-3">
           <FractalTree backgroundColor={background_color} />
