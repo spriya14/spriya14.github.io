@@ -24,10 +24,7 @@ const ProjectCardsComponent = () => {
     ];
 
     return (
-        <div className="row">
-            <div className="col-md-3">
-                {/* Left Column content here */}
-            </div>
+        <div className="row-md-8 d-flex justify-content-center pt-5">
 
             <div
                 className="col-md-8"

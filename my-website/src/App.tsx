@@ -18,11 +18,15 @@ function App() {
   return (
     <header style={{ backgroundColor: background_color }} className="App-header">
       <TopNavigation />
-      <div className="row">
-        <div className="col-md-3">
+      <div className="row-md-8 d-flex justify-content-center">
           <FractalTree backgroundColor={background_color} />
-        </div>
-        <div className="col-md-8 d-flex justify-content-center">
+      </div>
+      <div row-md-8 className="d-flex justify-content-center text-center">
+        <WelcomeText />
+      </div>
+      <div className="row d-flex justify-content-center text-center">
+        
+        <div className="col-md-8">
           <div
             className="card border-0 shadow rounded"
             style={{
@@ -69,7 +73,7 @@ function App() {
           </div>
         </div>
       </div>
-      <WelcomeText />
+      
       <ProjectCardsComponent />
       <Introduction />
       <ChatbotComponent />
